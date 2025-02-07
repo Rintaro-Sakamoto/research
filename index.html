@@ -1,0 +1,2086 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="FamilyBusiness_presntation_files/libs/clipboard/clipboard.min.js"></script>
+<script src="FamilyBusiness_presntation_files/libs/quarto-html/tabby.min.js"></script>
+<script src="FamilyBusiness_presntation_files/libs/quarto-html/popper.min.js"></script>
+<script src="FamilyBusiness_presntation_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="FamilyBusiness_presntation_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="FamilyBusiness_presntation_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="FamilyBusiness_presntation_files/libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.39">
+
+  <meta name="author" content="坂本凜太郎">
+  <meta name="dcterms.date" content="2025-01-22">
+  <title>課税優遇制度がファミリー企業と非ファミリー企業の賃上げに与える影響</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="FamilyBusiness_presntation_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="FamilyBusiness_presntation_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="FamilyBusiness_presntation_files/libs/revealjs/dist/theme/quarto-bbe7401fe57d4b791b917637bb662036.css">
+  <link href="FamilyBusiness_presntation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="FamilyBusiness_presntation_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="FamilyBusiness_presntation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="FamilyBusiness_presntation_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">課税優遇制度がファミリー企業と非ファミリー企業の賃上げに与える影響</h1>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+坂本凜太郎 
+</div>
+</div>
+</div>
+
+  <p class="date">2025-01-22</p>
+</section><section id="TOC">
+<nav role="doc-toc"> 
+<h2 id="toc-title">目次</h2>
+<ul>
+<li><a href="#/本研究の概要" id="/toc-本研究の概要"><span class="header-section-number">1</span> 本研究の概要</a></li>
+<li><a href="#/イントロ①ファミリービジネスファミリー企業とは" id="/toc-イントロ①ファミリービジネスファミリー企業とは"><span class="header-section-number">2</span> イントロ①：ファミリービジネス（ファミリー企業）とは？</a></li>
+<li><a href="#/イントロ②賃上げに関する課税優遇措置について" id="/toc-イントロ②賃上げに関する課税優遇措置について"><span class="header-section-number">3</span> イントロ②：賃上げに関する課税優遇措置について</a></li>
+<li><a href="#/本研究の目的" id="/toc-本研究の目的"><span class="header-section-number">4</span> 本研究の目的</a></li>
+<li><a href="#/先行研究" id="/toc-先行研究"><span class="header-section-number">5</span> 先行研究</a></li>
+<li><a href="#/仮説の設定" id="/toc-仮説の設定"><span class="header-section-number">6</span> 仮説の設定</a></li>
+<li><a href="#/仮説の検証方法" id="/toc-仮説の検証方法"><span class="header-section-number">7</span> 仮説の検証方法</a></li>
+<li><a href="#/検証" id="/toc-検証"><span class="header-section-number">8</span> 検証</a></li>
+<li><a href="#/本研究の課題点" id="/toc-本研究の課題点"><span class="header-section-number">9</span> 本研究の課題点</a></li>
+<li><a href="#/参考文献" id="/toc-参考文献"><span class="header-section-number">10</span> 参考文献</a></li>
+</ul>
+</nav>
+</section>
+<section>
+<section id="本研究の概要" class="title-slide slide level1 center" data-number="1">
+<h1><span class="header-section-number">1</span> 本研究の概要</h1>
+<aside class="notes">
+<p>お集まりいただきありがとうございます。ご存じのとおり４回生は１人なので、出来るだけ面白く説明できればと思います。来年度の卒業研究の何かしらのヒントにでもなれば幸いです。なお、使用したソフトはRですが、頑張ってQuartoを使って卒論やこの資料を作ったので、同じようにしたいという人がいれば設定などは共有できます。特に卒論のPDFを作るのは大変でした。</p>
+<p>経営学の専門知識は先生方に質問しに行って聞きました。北川先生、安間先生、山崎先生にお世話になりました。</p>
+<p>モデルの理論的背景など、統計のことは丸山先生がいるので安心です。DIDモデルなどは先生に計量経済の本を貸していただいて勉強しました。自分の理解が足りない部分は一緒に考えて教えてくださいました。ありがとうございます。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<p><strong>要約（一部）：</strong></p>
+<p>　本研究は日本の上場ファミリー/非ファミリー企業を対象に、課税優遇制度の賃上げへの影響を比較分析した。特に、<strong>2018年度施行の「賃上げ・生産性向上のための税制」に焦点を当て、ファミリー企業が非ファミリー企業に比べて賃上げを行ったかを検証</strong>した。</p>
+<aside class="notes">
+<p>テーマは、「ファミリービジネス」×「税制（特に、課税優遇措置）」。専門領域としては、ファミリービジネスが（狭義の）経営学やファイナンス、税制は会計学（特に税務会計）にあたると思います。</p>
+<p>と言われても？？？なのではないでしょうか。なので少しイントロをします。安心してください。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="イントロ①ファミリービジネスファミリー企業とは" class="title-slide slide level1 center" data-number="2">
+<h1><span class="header-section-number">2</span> イントロ①：ファミリービジネス（ファミリー企業）とは？</h1>
+
+</section>
+<section id="よく耳にするファミリー企業のイメージ" class="slide level2" data-number="2.1">
+<h2><span class="header-section-number">2.1</span> よく耳にするファミリー企業のイメージ</h2>
+<p>本研究のテーマのひとつは「ファミリービジネス」（≒同族経営、家族経営）ですが、どんなイメージを持っていますか？</p>
+<div class="fragment">
+<ul>
+<li><p>親族ばかりが優遇される？</p></li>
+<li><p>ブラック企業？</p></li>
+<li><p>規模は小さい？</p></li>
+<li><p>時代遅れの経営形態？</p></li>
+<li><p>短命？</p></li>
+<li><p>自社利益しか考えていない？（社会的責任を果たしていない？）</p></li>
+<li><p>反社会的？（不祥事の温床？）</p></li>
+</ul>
+<p>など… 確かに、ファミリー企業に特有の不祥事（家族の内紛など）が発生した例もある。（次ページ）</p>
+</div>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/FBjikenn.jpg" class="r-stretch quarto-figure-center" id="fig-FBjikenn"><p class="caption">
+Figure&nbsp;1: ファミリー企業の内紛例
+</p><aside class="notes">
+<p>ファミリー企業にまつわるマイナスなイメージはしばしば「神話」とも呼ばれます。「事実とは違う」という意味も想起させる言葉です。</p>
+<p>が、実際に問題も起きています。</p>
+<p>ファミリー企業は悪い経営形態なのでしょうか？</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="ファミリー企業の例" class="slide level2" data-number="2.2">
+<h2><span class="header-section-number">2.2</span> ファミリー企業の例</h2>
+<div id="tbl-FBlist" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-tbl">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-FBlist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: 日本の代表的なファミリー企業の時価総額順一覧（MUFG WM寄付講義より一部抜粋）
+</figcaption>
+<div aria-describedby="tbl-FBlist-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>No.</th>
+<th>企業名</th>
+<th>ファミリー名</th>
+<th>業種</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>トヨタ</td>
+<td>豊田</td>
+<td>輸送用機器</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>キーエンス</td>
+<td>滝崎</td>
+<td>電気機器</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>F.R.（ユニクロ）</td>
+<td>柳井</td>
+<td>小売</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>ソフトバンク</td>
+<td>孫</td>
+<td>情報・通信</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>セブン&amp;アイHD</td>
+<td>伊藤</td>
+<td>小売</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>よく知られている大きな会社も、意外とファミリー企業が多い。実は、上場企業の約半分はファミリー企業。</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 3
+  分類             企業数  比率
+  &lt;chr&gt;             &lt;int&gt; &lt;dbl&gt;
+1 非ファミリー企業   1672 0.518
+2 ファミリー企業     1555 0.482</code></pre>
+</div>
+</div>
+<aside class="notes">
+<p>ファミリー企業の中には日本を代表するような大企業もあり、上場企業の約半分を占めることからも、財務的に劣っているわけではなさそうです。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<p>ちなみに最近もサントリーHDの社長に創業家出身者が就いたことがニュースになっていた。</p>
+
+<img data-src="images/FB_Toyo.jpeg" class="r-stretch quarto-figure-center" id="fig-FB_Toyo"><p class="caption">
+Figure&nbsp;2: 東洋経済より引用
+</p></section>
+<section id="ファミリー企業は社会的責任を果たしているか" class="slide level2" data-number="2.3">
+<h2><span class="header-section-number">2.3</span> ファミリー企業は社会的責任を果たしているか？</h2>
+<div class="fragment">
+<div id="fig-elephants" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-elephants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-elephants" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-sunt" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-subfloat-fig">
+<div aria-describedby="fig-sunt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="images/img_05.jpg" data-ref-parent="fig-elephants">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-sunt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) 都内児童養護施設への寄贈（サントリーHPより引用）
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-elephants" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-naga" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-subfloat-fig">
+<div aria-describedby="fig-naga-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="images/FB_nd.jpg" data-ref-parent="fig-elephants">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-naga-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) 第9回永守賞表彰式典（2023）（永守財団HPより引用）
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-elephants" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div id="fig-mati" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-subfloat-fig">
+<div aria-describedby="fig-mati-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="images/tine_img01.jpg" data-ref-parent="fig-elephants">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-mati-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c) 県内最大級の地熱発電所が稼働（熊本県小国町）（町おこしエネルギーHPより引用）
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-elephants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: ファミリー企業の社会貢献活動例
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="fragment">
+<p>ファミリー企業は一概に「時代遅れ」「反社会的」などと言えるのだろうか…？</p>
+<aside class="notes">
+<p>財務的な評価から話は変わりますが、ファミリー企業は社会貢献活動が活発なことも知られています。</p>
+<ul>
+<li><p><strong>「サントリーHD」</strong>：「NPO法人 セカンドハーベストジャパン」を通したフードバンク活動では、児童養護施設、福祉施設、コミュニティセンター、被災地などに清涼飲料をはじめとした食品を寄贈。（首都圏・沖縄）</p></li>
+<li><p><strong>「公益財団法人 永守財団」</strong>：「国内外の研究技術分野における研究開発活動の顕彰を通じて、研究者・開発者を支援し、国内外の科学・産業の発展に寄与すること」を目的にニデック（旧日本電産株式会社）の永守重信会長が設立。技術表彰制度「永守賞」の運営、研究助成等を行う。</p></li>
+<li><p><strong>「株式会社 町おこしエネルギー」：</strong>「業務スーパー」で知られる「株式会社 神戸物産」の元社長沼田昭二氏が設立。「日本の将来の食料自給率UP！純国産再生可能エネルギーでエネルギー自給率UP！」大義に、地域社会の発展のため新たな事業を進めている。</p></li>
+</ul>
+<p>時代遅れ、反社会的か？</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</div>
+</section></section>
+<section>
+<section id="イントロ②賃上げに関する課税優遇措置について" class="title-slide slide level1 center" data-number="3">
+<h1><span class="header-section-number">3</span> イントロ②：賃上げに関する課税優遇措置について</h1>
+
+</section>
+<section id="なぜいま賃上げなのか" class="slide level2" data-number="3.1">
+<h2><span class="header-section-number">3.1</span> なぜいま「賃上げ」なのか？</h2>
+
+<img data-src="images/MHLW2024-01.png" class="r-stretch quarto-figure-center" id="fig-1"><p class="caption">
+Figure&nbsp;4: 実質賃金
+</p><aside class="notes">
+<p><u>概して実質賃金は下降傾向にある</u>。すなわち<u>物価上昇に賃金が追いついていない</u>ということ。それ故に（物価の抑制と並行して）<u>賃上げが求められている</u>。このような時流にあって、政府の要請を受けて<strong>賃上げに協力する企業は特に社会的責任の一端を果たしていると言える</strong>であろう。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="賃上げに関する課税優遇措置" class="slide level2" data-number="3.2">
+<h2><span class="header-section-number">3.2</span> 賃上げに関する課税優遇措置</h2>
+<ul>
+<li><p>所得拡大促進税制（2013年～）</p></li>
+<li><p><strong>賃上げ・生産性向上のための税制（2018年～）</strong></p></li>
+<li><p>人材確保等促進税制（2021年～）</p></li>
+</ul>
+<p>（ <span class="citation" data-cites="Amma2014">安間 (<a href="#/参考文献" role="doc-biblioref" onclick="">2024</a>)</span> から一部抜粋）</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>ここで、「賃上げ・生産性向上のための税制」とは「賃上げ等を行った企業に対して、給与等支給額の増加額の一部を法人税から税額控除」するものである。そして「給与等」とは、「俸給・給料・賃金・歳費及び賞与並びに、これらの性質を有する給与(給与所得となる給与)」である。</strong></p>
+</div>
+<div class="callout-content">
+
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>企業による賃上げを促すためのインセンティブとして課税優遇措置が存在している。大企業向けの賃上げに関する課税優遇措置には以下のようなものがある。</p>
+<p>なお<u>本研究では2018年度施行の「賃上げ・生産性向上のための税制」の前後に着目</u>する。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="本研究の目的" class="title-slide slide level1 center" data-number="4">
+<h1><span class="header-section-number">4</span> 本研究の目的</h1>
+<aside class="notes">
+<p>ここまで「ファミリービジネス」と「賃上げに関する課税優遇措置」について紹介した。</p>
+<p>これらを踏まえ、本研究の目的は次のようにする。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<p><strong>本研究の目的</strong>：</p>
+<p>　「本研究では賃上げに関する課税優遇がファミリー企業および非ファミリー企業の人件費に与えた影響を分析し、賃上げの傾向にどのような差異があるかを明らかにする。それにより、<strong>非ファミリー企業と比較した際のファミリー企業の社会的な存在意義の一端を示す</strong>ことを目指す。」</p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>平たく言えば、「もしファミリー企業がそうでない企業（非ファミリー企業と呼んでいます）よりも社会的ならば、（例えば国や地域社会の）給与水準を上げる挙げることに、より協力的なんじゃないか？」ということ。「より社会的」とかは直接調べられないことなので、その「より社会的」からのインプリケーションである「人件費の増大」に着目します。</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<aside class="notes">
+<p>noteを見て</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="先行研究" class="title-slide slide level1 center" data-number="5">
+<h1><span class="header-section-number">5</span> 先行研究</h1>
+<aside class="notes">
+<p>研究目的まで話しました。</p>
+<p>因みに先ほどまではファミリー企業や賃上げ税制に関するトピックを紹介してきましたが、学術的にはどんなことが分かっているのでしょうか？</p>
+<p>少しメタ的な（抽象的な）話になり退屈かもしれませんが紹介させてもらいます。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="ファミリービジネスの実証研究" class="slide level2" data-number="5.1">
+<h2><span class="header-section-number">5.1</span> ファミリービジネスの実証研究</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 94%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><span class="citation" data-cites="Saito2008">Saito (<a href="#/参考文献" role="doc-biblioref" onclick="">2008</a>)</span></td>
+<td><p>創業者の子孫が所有・経営するファミリー企業は、非ファミリー企業に比してパフォーマンスが低いことを示した。これは、ファミリー企業はファミリーメンバーを優先的に経営に抜擢するので、結果として能力の伴わない事業承継が行われているためである。</p>
+<p>一方で、所有・経営のどちらか一方のみを創業家が担うファミリー企業は、非ファミリー企業よりもパフォーマンスが高いことも示した。</p></td>
+</tr>
+<tr class="even">
+<td><span class="citation" data-cites="Kubota2012">久保田 et al. (<a href="#/参考文献" role="doc-biblioref" onclick="">2012</a>)</span></td>
+<td>非ファミリー企業に比べファミリー企業は損失をより迅速に開示する（会計保守主義の傾向がより強い）ことを示した。</td>
+</tr>
+<tr class="odd">
+<td><span class="citation" data-cites="Asaba2013">Asaba (<a href="#/参考文献" role="doc-biblioref" onclick="">2013</a>)</span></td>
+<td>ファミリー企業は需要変動の大きい状況下でも設備投資を減らさない特徴がある（我慢強い投資）</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<p>因みに、 <span class="citation" data-cites="Saito2008">Saito (<a href="#/参考文献" role="doc-biblioref" onclick="">2008</a>)</span> の言うパフォーマンスはトービンのqです。市場の投資家からの期待度合いを合わらす指標です。企業の業績そのものとは少し乖離があることは注意したいです。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<table class="caption-top">
+<colgroup>
+<col style="width: 3%">
+<col style="width: 96%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><span class="citation" data-cites="Asaba2019">Asaba and Wada (<a href="#/参考文献" role="doc-biblioref" onclick="">2019</a>)</span></td>
+<td>ファミリー企業は非ファミリー企業に比べR&amp;D投資が少ないにもかかわらず、R&amp;Dに重点が置かれる製薬産業でも生存出来ていることを指摘し、これはファミリー企業が急進的なイノベーションを避け、その代わりに自社の伝統や強みを駆使したり、狭い範囲でイノベーションを起こすことに注力するからだと説明した（コンタクトヒッティングR&amp;D戦略）。</td>
+</tr>
+<tr class="even">
+<td><span class="citation" data-cites="FB2015">後藤 (<a href="#/参考文献" role="doc-biblioref" onclick="">2015</a>)</span></td>
+<td>ファミリー企業の社会貢献活動に関して、彼らは社会的責任を通して地域コミュニティとの関係を強化し、ファミリー内部の結束力をも強めていると説明した。</td>
+</tr>
+<tr class="odd">
+<td><span class="citation" data-cites="Dyer2006">Dyer and Whetten (<a href="#/参考文献" role="doc-biblioref" onclick="">2006</a>)</span></td>
+<td>「社会問題（Social Concerns）」に関して、ファミリー企業は非ファミリー企業よりも社会的責任を果たす傾向にあると結論付けた。</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<table class="caption-top">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 91%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><span class="citation" data-cites="Ebihara2012">Ebihara et al. (<a href="#/参考文献" role="doc-biblioref" onclick="">2012</a>)</span></td>
+<td>非ファミリー企業に比べてファミリー企業の利益の質<sup>1</sup>が高いことを発見した。</td>
+</tr>
+<tr class="even">
+<td><span class="citation" data-cites="Asaba2015">淺羽 (<a href="#/参考文献" role="doc-biblioref" onclick="">2015</a>)</span></td>
+<td><span class="citation" data-cites="Kubota2012">久保田 et al. (<a href="#/参考文献" role="doc-biblioref" onclick="">2012</a>)</span> と&nbsp;<span class="citation" data-cites="Ebihara2012">Ebihara et al. (<a href="#/参考文献" role="doc-biblioref" onclick="">2012</a>)</span> &nbsp;の結果を受け、エージェンシー問題の影響が少ないファミリービジネスは損失を早期に報告し経営改善の努力を行うことが出来ると説明した。</td>
+</tr>
+</tbody>
+</table>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>「利益の質」については、神戸大学MBA向けに書かれた以下の説明が分かりやすい。</p>
+<p>“利益数値を意思決定に利用する際、情報利用者は「水準」だけでなく「品質」についても考慮すべきであるという議論がある。たとえば、当期純利益がともに100万円のA社とB社があったとする。「水準」で評価する限り両社の100万円は同等に評価できるが、果たしてその評価は妥当であろうか。仮に、A社は300万円の現金売上を、B社は300万円の掛売上を行っていたとしよう。このとき、売上高は同額であってもB社には代金回収に伴うリスクが生じることになる。そこで、B社の利益にはこのようなリスクを反映した評価が求められる。また、経営者は資金調達を有利に達成することなどを意図して、利益捻出の動機を持つことがある。仮にB社の経営者がこのような利益捻出を行っていたとすれば、B社の利益には業績とは関係のない経営者の調整分が含まれることになる。経営者の調整分は、割引いて評価する必要があるだろう。以上のように、同じ100万円の利益であっても、その内容を詳細に検討すれば評価は異なる可能性がある。このような会計利益の内容的な差異は、しばしば「利益の品質」という表現で議論される。”（北川教央）</p></li></ol></aside></section>
+<section id="ファミリービジネスに関係する理論" class="slide level2" data-number="5.2">
+<h2><span class="header-section-number">5.2</span> ファミリービジネスに関係する理論</h2>
+<div id="tbl-FBTheory" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-tbl">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-FBTheory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: ファミリービジネスの理論
+</figcaption>
+<div aria-describedby="tbl-FBTheory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 83%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>スリーサークルモデル<span class="citation" data-cites="Gersick1997">(<a href="#/参考文献" role="doc-biblioref" onclick="">Gersick, Davis, et al. 1997</a>)</span></td>
+<td><a href="#/fig-2" class="quarto-xref">Figure&nbsp;5</a> のスリーサークルモデルは、ファミリー企業を「所有権」、「経営」、「家族」の三つのサークルが交差するシステムとして捉える。ファミリーメンバーが所有と経営のどちらか、或いはその両方に関わることが視覚的に表現されている。</td>
+</tr>
+<tr class="even">
+<td>エージェンシー理論<span class="citation" data-cites="Fama1983 Jensen1976">(<a href="#/参考文献" role="doc-biblioref" onclick="">Fama and Jensen 1983</a>; <a href="#/参考文献" role="doc-biblioref" onclick="">Jensen and Meckling 1976</a>)</span></td>
+<td>経営者が株主の意に反して自らの便益だけを追求するという、経営者と株主の利害対立を扱った理論。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/three_circle.png" class="r-stretch quarto-figure-center" id="fig-2"><p class="caption">
+Figure&nbsp;5: スリーサークルモデル
+</p></section>
+<section class="slide level2">
+
+<div id="tbl-FBTheory2" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-tbl">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-FBTheory2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: ファミリービジネスの理論
+</figcaption>
+<div aria-describedby="tbl-FBTheory2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 80%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>社会情緒資産（socio-emotional wealth）理論（SEW理論）<span class="citation" data-cites="Gomez2007">(<a href="#/参考文献" role="doc-biblioref" onclick="">Gómez-Mejía et al. 2007</a>)</span></td>
+<td>ファミリー企業の創業家が、財務的な効用だけでなく非財務的な効用にも関心があるという考え方である。社会情緒的資産とはファミリーの情緒的なニーズを満たすものであり、ファミリーとしてのアイデンティティやファミリーの影響力の行使、ファミリーによる永続的な支配などを含む概念である。</td>
+</tr>
+<tr class="even">
+<td>スチュワードシップ理論<span class="citation" data-cites="Davis1997 Donaldson1991">(<a href="#/参考文献" role="doc-biblioref" onclick="">Davis, Schoorman, and Donaldson 1997</a>; <a href="#/参考文献" role="doc-biblioref" onclick="">Donaldson and Davis 1991</a>)</span></td>
+<td><p>エージェンシー理論と対置される理論であり、リーダーは自分以外のすべての利害関係者の利益にもなるように尽くす存在であると考える。</p>
+<p>※「社会情緒的資産の考え方では、ファミリーは自らの情緒的ニーズに関心があるのに対し、スチュワードはすべての利害関係者の利益を考えて行動するという点が異なる。」<span class="citation" data-cites="Asaba2015">(<a href="#/参考文献" role="doc-biblioref" onclick="">淺羽 2015</a>)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="税務会計領域の理論" class="slide level2" data-number="5.3">
+<h2><span class="header-section-number">5.3</span> 税務会計領域の理論</h2>
+<div id="tbl-TaxTheory" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-tbl">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-TaxTheory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4: 税務会計領域の理論
+</figcaption>
+<div aria-describedby="tbl-TaxTheory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 85%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>課税優遇による税引き前投資収益率の減少<span class="citation" data-cites="Suzuki2013">(<a href="#/参考文献" role="doc-biblioref" onclick="">鈴木 2013</a>)</span></td>
+<td>課税優遇の制度を利用することで企業は顕在的な税負担を軽減することが出来る可能性がある一方で、税引き前投資収益率を低下させるかもしれない。これは課税優遇資産に対する需要が高まることでその資産の市場価格が上昇するためだと考えられる。賃上げに関する課税優遇についても、賃上げ（人材投資）をした企業の税引き前投資収益率を下げ得る。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section></section>
+<section>
+<section id="仮説の設定" class="title-slide slide level1 center" data-number="6">
+<h1><span class="header-section-number">6</span> 仮説の設定</h1>
+<aside class="notes">
+<p>研究目的を達成するための仮説を立てます。ここからは分析なので、紹介した学術的な知識も活用して行きます。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<p><strong>SEW理論</strong>（<a href="#/tbl-FBTheory2" class="quarto-xref">Table&nbsp;3</a> ）によれば、ファミリー企業はファミリーとしての名声や評判を維持・向上することを目的として、社会からの賃上げの期待に応えようとするだろう。</p>
+<p>また、<strong>スチュワードシップ理論</strong>（<a href="#/tbl-FBTheory2" class="quarto-xref">Table&nbsp;3</a> ）によれば、ファミリー企業は従業員の利益のために賃上げをする可能性がある。</p>
+<p>そのため、<strong>課税優遇措置により税引き前投資収益率が低下する</strong>（<a href="#/tbl-TaxTheory" class="quarto-xref">Table&nbsp;4</a>）可能性のある時期においても、ファミリー企業はそれを厭わず賃上げをすることが予想される。従って以下の仮説が立つ。</p>
+<p><strong>仮説：</strong>ファミリー企業は賃上げ税制施行後に、非ファミリー企業よりも賃上げをしている。</p>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p>仮にファミリー企業が課税優遇措置に乗じて賃上げをしていたとして、それを課税優遇措置を利用した税負担削減行動（俗に言う「節税」）であるとは単純に結論付けることができないというところがポイント。それ故に、賃上げを社会的責任の遂行と評価することは妥当だと本研究では考える。</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>「厭わず」のところ、「なんでわざわざ税制を絡めたの」？の説明が必要。下のコラムちゃんと読む</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="仮説の検証方法" class="title-slide slide level1 center" data-number="7">
+<h1><span class="header-section-number">7</span> 仮説の検証方法</h1>
+<aside class="notes">
+<p>この仮説をどう検証するのかについて説明します。引き続き少し退屈かもしれません。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="ファミリービジネスの定義" class="slide level2" data-number="7.1">
+<h2><span class="header-section-number">7.1</span> ファミリービジネスの定義</h2>
+<h3 data-number="7.1.1" id="ファミリービジネスの多様な定義"><span class="header-section-number">7.1.1</span> ファミリービジネスの多様な定義</h3>
+<dl>
+<dt><span class="citation" data-cites="Gersick1997">Gersick, Davis, et al. (<a href="#/参考文献" role="doc-biblioref" onclick="">1997</a>)</span> の定義</dt>
+<dd>
+<p>親族の影響下にある企業或いはその形態</p>
+</dd>
+<dt><span class="citation" data-cites="Shim2014">沈 (<a href="#/参考文献" role="doc-biblioref" onclick="">2014</a>)</span> の定義</dt>
+<dd>
+<p>創業者を含めた創業家一族（血，結婚または養子）が株式を所有しているか、または最高経営責任者として企業をコントロールしている企業</p>
+</dd>
+<dt><span class="citation" data-cites="Iriyama2014">入山 and 山野井 (<a href="#/参考文献" role="doc-biblioref" onclick="">2014</a>)</span> の定義</dt>
+<dd>
+<p>創業者・あるいはその一族（以下，創業家）が経営に関与する企業。関与の方法は「同族所有（family ownership）」と「同族経営（family management）」の２種類。</p>
+</dd>
+<dt><span class="citation" data-cites="FB2015">後藤 (<a href="#/参考文献" role="doc-biblioref" onclick="">2015</a>)</span> の定義</dt>
+<dd>
+<p>ファミリーが同一あるいは異なった時点において役員または株主のうち2名以上を占める企業。</p>
+</dd>
+</dl>
+<p>など。</p>
+<aside class="notes">
+<aside class="notes">
+<p>分析に際し、どの企業がファミリービジネスでどの企業が非ファミリービジネスなのかを分類せねばなりません。従って、ファミリービジネスの定義が必要になります。しかし、ファミリービジネスは研究によってその定義は様々であり、普遍的な定義は存在しません。</p>
+<p>そこで、いくつかの定義を紹介します。</p>
+<p><span class="citation" data-cites="Gersick1997">Gersick, Davis, et al. (<a href="#/参考文献" role="doc-biblioref" onclick="">1997</a>)</span> の定義は抽象的すぎるあまり、研究においてはさらに具体的な定義が求められることになります。例えば…などがある。</p>
+<p>なお、 <u>本研究では、 <span class="citation" data-cites="FB2015">後藤 (<a href="#/参考文献" role="doc-biblioref" onclick="">2015</a>)</span> の定義を用いる。</u></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<h3 data-number="7.1.2" id="本研究におけるファミリービジネスの定義"><span class="header-section-number">7.1.2</span> 本研究におけるファミリービジネスの定義</h3>
+<dl>
+<dt><span class="citation" data-cites="FB2015">後藤 (<a href="#/参考文献" role="doc-biblioref" onclick="">2015</a>)</span> の定義（再掲）</dt>
+<dd>
+<p>ファミリーが同一あるいは異なった時点において役員または株主のうち2名以上を占める企業。</p>
+</dd>
+</dl>
+<p>は、より詳細には、同一あるいは異なった時点に、</p>
+<p>　<strong>経営面</strong>：会社法上の役員にファミリーメンバーが（2名以上）入っている。</p>
+<p>　<strong>所有面</strong>：主要株主（上位10以内）にファミリーメンバーが（2名以上）入っている。</p>
+<p>を満たす企業をファミリー企業と定義する。</p>
+<p>なお、ここで言うファミリーとは必ずしも創業家とは限らない。創業家以外の一族が会社を承継している場合、その一族もファミリーとしている。更に、ファミリーは個人に限らず、その影響下の法人（関連会社、財団など）も含む。</p>
+<aside class="notes">
+<p>そうなんだ、という程度で問題ありません。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="分析に使用するデータと前処理" class="slide level2" data-number="7.2">
+<h2><span class="header-section-number">7.2</span> 分析に使用するデータと前処理</h2>
+<h3 data-number="7.2.1" id="使用するデータ"><span class="header-section-number">7.2.1</span> 使用するデータ</h3>
+<p>分析においては日経NEEDS Financial Quest<span class="citation" data-cites="nikkeiNEEDSFQ">(<a href="#/参考文献" role="doc-biblioref" onclick="">Nikkei Inc. 2024</a>)</span>の「一般事業会社」※の財務データ（パネルデータ）を利用した。また、<span class="citation" data-cites="FB2015">(<a href="#/参考文献" role="doc-biblioref" onclick="">後藤 2015</a>)</span>、<span class="citation" data-cites="FB2018">(<a href="#/参考文献" role="doc-biblioref" onclick="">後藤 2018</a>)</span>、<span class="citation" data-cites="FB2022">(<a href="#/参考文献" role="doc-biblioref" onclick="">後藤 2022</a>)</span>のファミリービジネスデータ（上場企業）を使用しファミリー企業と非ファミリー企業を分類できるようにした。特にファミリー/非ファミリー企業を分類するダミー変数を使用した。これら2種類のデータを組み合わせて使用するため、分析対象企業は日本の上場企業である。</p>
+<p>※「一般事業会社」…日経NEEDSが独自に定義した用語であり詳細は日経NEEDSのコードブックを参照されたいが、「公的なフォーマットに従い財務情報を開示している企業」と言える。</p>
+<aside class="notes">
+<p>ここも流して大丈夫。ですが、</p>
+<p>卒論で企業データを扱いたい場合は、先生の許可があれば日経NEEDS FQを使えます。NEEDSの操作は慣れるまでは難しいです。使っている先生に聞くのが早いと思います。自分は安間先生に聞きました。</p>
+<p>ちなみに、白書のデータは先輩の東さんからもらいました。</p>
+<p>データを統合するのはそれなりに大変でした。AIにコードを書いてもらい自分で修正して何とか。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<h3 data-number="7.2.2" id="前処理"><span class="header-section-number">7.2.2</span> 前処理</h3>
+<p>分析にあたり、データの整形を行った。具体的には、</p>
+<ul>
+<li>財務データの欠損値を含む行を削除。</li>
+<li>財務データにおいて決算月を表すyyyy/mmの形の列を日付型に変換した新しい列を作成。</li>
+<li>決算月を表す列を会計年度（yyyyの形）に変換した新しい列を作成。例えば2020年3月なら2019年度、2020年4月なら2020年度となる。</li>
+<li>財務データとファミリービジネスデータを連結。</li>
+<li>数値の列を数値型へ変換。</li>
+<li>「賃上げ・生産性向上のための税制」適用開始より前（2015/4～2018/3）と以後（2018/4～2020/3）を分ける年度ダミー変数の列を作成。</li>
+<li>産業の種類を表す変数を因子型にしたうえで回帰分析で使用。因子型の変数はRの回帰分析においては複数のダミー変数とみなされる。なおこの「産業ダミー」は、分析の際には数を1つ削除した（ダミー変数同士を線形独立にするため）。</li>
+</ul>
+<p>を行った。以下は使用するデータセットの一部である(財務データの単位は、指標等を除き百万円)。</p>
+<aside class="notes">
+<p>多分、みなさんならやってみたらわかります。</p>
+<p>生データでは使い物にならないということが分かればOKです。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<div class="cell column-page">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 17,968 × 15
+   Name     Code   Year LaborCost_by_person Year_dummy FB_dummy FB_type      ROA
+   &lt;chr&gt;    &lt;chr&gt; &lt;dbl&gt;               &lt;dbl&gt;      &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;      &lt;dbl&gt;
+ 1 日東製網 3524   2015               1.36           0        1 A        0.0391 
+ 2 神島化…  4026   2015               1.13           0        0 0        0.0381 
+ 3 伊藤園   2593   2015               5.14           0        1 A        0.0447 
+ 4 アイン…  9627   2015               1.15           0        1 A        0.114  
+ 5 サンオ…  7623   2015               6.74           0        1 A       -0.0279 
+ 6 ロック…  2910   2015               6.76           0        1 A        0.0698 
+ 7 共和工…  5971   2015               0.741          0        1 A        0.0494 
+ 8 ヤガミ   7488   2015               5.09           0        1 A        0.0894 
+ 9 ナ・デ…  7435   2015               3.28           0        1 A        0.110  
+10 マツモト 7901   2015               1.26           0        1 A        0.00238
+# ℹ 17,958 more rows
+# ℹ 7 more variables: TotalAssets &lt;dbl&gt;, lagged_TotalAssets &lt;dbl&gt;, Sales &lt;dbl&gt;,
+#   Cash &lt;dbl&gt;, Leverage &lt;dbl&gt;, Employee &lt;dbl&gt;, ind_dummy &lt;fct&gt;</code></pre>
+</div>
+</div>
+<div id="tbl-variables" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-tbl">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-variables-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5: 各変数とその意味
+</figcaption>
+<div aria-describedby="tbl-variables-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 85%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>列名</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Name</td>
+<td>企業名。</td>
+</tr>
+<tr class="even">
+<td>Code</td>
+<td>株式コード。</td>
+</tr>
+<tr class="odd">
+<td>Year</td>
+<td>会計年度。</td>
+</tr>
+<tr class="even">
+<td><strong>LaborCost_by_person</strong></td>
+<td>従業員１人当たり人件費・福利厚生費。ここで人件費・福利厚生費とは、従業員の給与、賞与、法定福利費、福利厚生費、福利施設費、賞与引当金繰入額等である。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<aside class="notes">
+<p>特に重要なのはLaborCost_by_personです。要するにずっと言ってきた「人件費」です。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<table class="caption-top">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 90%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>列名</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Year_dummy</td>
+<td>年度ダミー。「賃上げ・生産性向上のための税制」適用開始より前（2015/4～2018/3）なら0、以後（2018/4～2020/3）なら1をとる。</td>
+</tr>
+<tr class="even">
+<td>FB_dummy</td>
+<td>ファミリービジネスダミー。その企業がその年度に非ファミリー企業なら0、ファミリー企業ならば1をとる。</td>
+</tr>
+<tr class="odd">
+<td>ROA</td>
+<td>総資本事業利益率。</td>
+</tr>
+<tr class="even">
+<td>Sales</td>
+<td>売上。</td>
+</tr>
+<tr class="odd">
+<td>Cash</td>
+<td>現金。</td>
+</tr>
+<tr class="even">
+<td>Leverage</td>
+<td>財務レバレッジ。</td>
+</tr>
+<tr class="odd">
+<td>Employee</td>
+<td>従業員数。</td>
+</tr>
+<tr class="even">
+<td>ind_dummy</td>
+<td>産業ダミー。36の産業に関する因子型変数。</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>ROA（rate of return on asset: 総資産利益率）とは使用総資本の利益率で、企業の持つ総資本の収益性を測定できます。因みに、本研究のROAに用いられている利益は「事業利益」（営業利益＋受取利益・配当金＋持分法利益）です。正常な収益力を示す利益概念に「経常利益」（営業利益＋営業外収益－営業外費用）がありますが、これは用いません。何故なら、分母の「総資本」は他人資本を含むのに対し、他人資本に対する報酬である支払利息を営業外費用として除してしまっている経常利益は、分母の総資本との対応が取れておらず、使用総資本の利益率としては不適切だからです。経常利益に「特別利益/損失」を加減した「税引前当期純利益」や、そこから更に法人税・住民税・事業税を引いた「当期純利益」も当然不適切です。一方で、営業利益をそのまま分子に置くことも問題があります。まずは営業利益に受取利息・配当金などを加算します。これにより、総資本のうち余剰資金運用活動に回った分で得た収益である「金融収益」が分子に反映されます。次に、「持分法による投資利益」（関連会社の当期純利益×親会社の持ち株比率）も加算します。その理由には２つの考え方があります。まず１つ目は、持分法利益が営業利益に準ずるものであるからという考え方です。２つ目は、持分法利益が連結決算で相殺消去された関連会社からの受取配当金（金融収益）に代わるものであるからという考え方です。ただし、何れにしても持分法利益は利益概念として当期純利益を内包しているため、関連会社の営業利益だけでなく営業外損益や特別損益なども含まれてしまいます。なお、本研究では前期末の総資本を分母に用いていますが、期中平均を算出して用いる方法も好ましいです。</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>因みに雑談ですが、今年度は会計アンチの人は居ますか？また、それはなぜですか？ 自分は元々アンチでしたが、会計学の重要性を知り、今はアンチではありません。また、自分は会計学アンチというよりも簿記アンチでした。まだ経営学のことを何もわからない状態で簿記を丸暗記させられたことで嫌いになったのだと思います。でも北川先生の財務会計や財務諸表分析を受けて会計へのイメージが変わりました。一つの会計数値をとっても背後には広大な理論の世界が広がっていることを知りました。企業の経済実態を反映するために先人が様々な手法を生み出しています。そして中には絶対的な正解のない問題もあります。企業の実態を把握するには、どんな理由でいまの会計の制度が採用されているのかを知り、高い解像度で会計情報を読み取ることが重要で、それをするには会計学を学ぶ必要があると今は分かりました。これは１～２年生のうちには気づくことが出来ないことだと思います。自分は運よく会計の偉大さに気づくことが出来ました。なので皆さんにも会計の重要性と偉大さを知っておいてもらいたいです。もうわかっているよという場合はおせっかいでした。すみません。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="検証" class="title-slide slide level1 center" data-number="8">
+<h1><span class="header-section-number">8</span> 検証</h1>
+<aside class="notes">
+<p>実際に検証します。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="分析手法" class="slide level2" data-number="8.1">
+<h2><span class="header-section-number">8.1</span> 分析手法</h2>
+<p><strong>仮説の検証をする上で焦点となるのは、ファミリー企業の従業員１人当たり人件費・福利厚生費が課税優遇制度施行前後で、非ファミリー企業のそれと比較してより大きく増大しているか</strong>である。</p>
+<p>従ってまず、</p>
+<p><strong>二群</strong>：ファミリー企業と非ファミリー企業</p>
+<p><strong>二期間</strong>： 課税優遇制度施行前（<span class="math inline">\(t=0\)</span>）と後（<span class="math inline">\(t=1\)</span>）</p>
+<p>のDID分析を行う。これにより課税優遇後にファミリー企業の従業員１人当たり人件費・福利厚生費が増大しているか及びその増大の程度を調べる。</p>
+<aside class="notes">
+<p>もしかしたらご存じかもしれませんが、DID分析とか（後述する）イベントスタディとかは後でモデルを説明するので分からなくてOK。上の太字が大切！</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<p>次に、</p>
+<p><strong>二群</strong>：ファミリー企業と非ファミリー企業</p>
+<p><strong>多期間</strong>：2015年度～2020年度（2017年度は基準年度として除外）</p>
+<p>のイベントスタディ（DID分析の一種）を行う。これにより各年度のファミリー企業の従業員１人当たり人件費・福利厚生費が基準年度（2017年）と比較して大きいか及びその大きさの程度を調べる。イベントスタディでは推定値の年度毎の推移を観察することが出来る。</p>
+</section>
+<section id="did分析" class="slide level2" data-number="8.2">
+<h2><span class="header-section-number">8.2</span> DID分析</h2>
+<h3 data-number="8.2.1" id="did分析のグラフ"><span class="header-section-number">8.2.1</span> DID分析のグラフ</h3>
+<p>※外れ値を考慮するために、統計処理や分析の実行に際しデータの上下2.5%ずつを削除したもの（すなわちデータ全体の95%）も表示している。</p>
+<div id="fig-did" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-did-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-did" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-did-1" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-subfloat-fig">
+<div aria-describedby="fig-did-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="FamilyBusiness_presntation_files/figure-revealjs/fig-did-1.png" data-fig-pos="H" data-ref-parent="fig-did" width="960">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-did-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) 全データ
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-did" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-did-2" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-subfloat-fig">
+<div aria-describedby="fig-did-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="FamilyBusiness_presntation_files/figure-revealjs/fig-did-2.png" data-fig-pos="H" data-ref-parent="fig-did" width="960">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-did-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) 上下2.5%削除
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-did-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: 従業員１人当たり人件費・福利厚生費の平均の推移
+</figcaption>
+</figure>
+</div>
+<aside class="notes">
+<p>DID分析に入っていきますがまだDIDが何かはわからなくてOKです。</p>
+<p>FB、NFBそれぞれについて、人件費の平均が課税優遇前後でどう推移したかが描かれています。赤がFB、青がNFBです。一応右側に、外れ値を削除したグラフも載せてます。</p>
+<p>後述するように、自分はデータをうまく取れていないのでこの結果自体には意味がないのですが、FBはむしろ人件費が下がって、NFBは上がってますね。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<h3 data-number="8.2.2" id="モデル"><span class="header-section-number">8.2.2</span> モデル</h3>
+<h4 data-number="8.2.2.1" id="つ目のモデル"><span class="header-section-number">8.2.2.1</span> １つ目のモデル</h4>
+<span class="math display">\[\begin{align}
+\text{LaborCost_by_person}_{it}&amp;=\mu+\theta \text{FB_dummy}_{it}+\pi \text{Year_dummy}_t\\
+&amp;\quad+\beta \text{FB_dummy}_{it}\times \text{Year_dummy}_t+\epsilon_{it}
+\end{align}\]</span>
+<ul>
+<li><p><span class="math inline">\(i\)</span>は企業です。</p></li>
+<li><p>課税優遇制度施行前なら<span class="math inline">\(t=0\)</span>で、後なら<span class="math inline">\(t=1\)</span>です。</p></li>
+<li><p><span class="math inline">\(\mu\)</span> は切片です。FBもNFBも必ず<span class="math inline">\(\mu\)</span>は人件費があります。</p></li>
+<li><p>課税優遇前、FBとNFBではまず <span class="math inline">\(\theta\)</span>だけ差があります。</p></li>
+<li><p>FBもNFBも、課税優遇後に<span class="math inline">\(\pi\)</span>は変化します。</p></li>
+<li><p><strong>NFBはこれで終わりですが、FBは</strong><span class="math inline">\(\beta\)</span><strong>だけさらに変化します。 これがDID（処置群に対する平均処置効果と呼ばれるもの）です。</strong></p></li>
+<li><p><span class="math inline">\(\epsilon\)</span>は誤差項です。</p></li>
+</ul>
+<aside class="notes">
+<p>１つ目のモデルについて、</p>
+<ul>
+<li><p><span class="math inline">\(i\)</span>は企業です。</p></li>
+<li><p>課税優遇制度施行前なら<span class="math inline">\(t=0\)</span>で、後なら<span class="math inline">\(t=1\)</span>です。</p></li>
+<li><p><span class="math inline">\(\mu\)</span> は切片です。FBもNFBも必ず<span class="math inline">\(\mu\)</span>は人件費があります。</p></li>
+<li><p>課税優遇前、FBとNFBではまず <span class="math inline">\(\theta\)</span>だけ差があります。</p></li>
+<li><p>FBもNFBも、課税優遇後に<span class="math inline">\(\pi\)</span>は変化します。</p></li>
+<li><p>NFBはこれで終わりですが、FBは<span class="math inline">\(\beta\)</span>だけさらに変化します。</p></li>
+<li><p><span class="math inline">\(\epsilon\)</span>は誤差項です。</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<h4 data-number="8.2.2.2" id="つ目のモデル-1"><span class="header-section-number">8.2.2.2</span> ２つ目のモデル</h4>
+<span class="math display">\[\begin{align}
+\text{LaborCost_by_person}_{it}&amp;=\mu+\alpha_1 \text{ROA}_{it} + \alpha_2 \text{Sales}_{it} +\alpha_3 \text{Cash}_{it}\\
+&amp;\quad+\alpha_4 \text{Leverage}_{it}+\alpha_5 \text{Employee}_{it}\\
+&amp;\quad+\alpha_6 \text{ind_dummy}_{it}\\
+&amp;\quad+\theta \text{FB_dummy}_{it}+\pi \text{Year_dummy}_t\\
+&amp;\quad+\beta \text{FB_dummy}_{it}\times \text{Year_dummy}_t+\epsilon_{it}
+\end{align}\]</span>
+<p>２つ目のモデルは、コントロール変数を加えたものです。ROA（総資本事業利益率）、Sales（売上）、Cash（現金）、Leverage（財務レバレッジ）、Employee（従業員数）、ind_dummy（産業ダミー）を加えています。これらの変数は、人件費に影響を与えると考えられるため、コントロール変数として加えています。</p>
+<aside class="notes">
+<p>２つ目のモデルは、コントロール変数を加えたものです。ROA（総資本事業利益率）、Sales（売上）、Cash（現金）、Leverage（財務レバレッジ）、Employee（従業員数）、ind_dummy（産業ダミー）を加えています。これらの変数は、人件費に影響を与えると考えられるため、コントロール変数として加えています。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<h3 data-number="8.2.3" id="平行トレンド仮定"><span class="header-section-number">8.2.3</span> 平行トレンド仮定</h3>
+<p>本研究のDID分析における平行トレンド仮定を記述すると以下のようになる。</p>
+<dl>
+<dt>平行トレンド仮定</dt>
+<dd>
+<p>もし課税優遇が無ければ（反実仮想）、ファミリー企業と非ファミリー企業の従業員１人当たり人件費・福利厚生費は時間とともに同じように変化してゆく</p>
+</dd>
+</dl>
+<aside class="notes">
+<p>DID分析は平行トレンドを仮定しているため、分析に際してはこの仮定の成立賛否を確認しておく必要がある。しかし<strong>平行トレンド仮定は反実仮想に言及している</strong>ためデータから確認することは不可能である。そこで、<strong>プレトレンドテストと呼ばれる手法によって最低限の確認を行う</strong>。 先生が紹介していた、林先生の因果推論の本でも同じ概念（反実仮想）が出てきます。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<h4 data-number="8.2.3.1" id="sec-pretrend"><span class="header-section-number">8.2.3.1</span> プレトレンドテスト</h4>
+<div id="fig-pretrend" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-pretrend-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-pretrend" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-pretrend-1" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-subfloat-fig">
+<div aria-describedby="fig-pretrend-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="FamilyBusiness_presntation_files/figure-revealjs/fig-pretrend-1.png" data-fig-pos="H" data-ref-parent="fig-pretrend" width="960">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-pretrend-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) 全データ
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-pretrend" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-pretrend-2" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-subfloat-fig">
+<div aria-describedby="fig-pretrend-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="FamilyBusiness_presntation_files/figure-revealjs/fig-pretrend-2.png" data-fig-pos="H" data-ref-parent="fig-pretrend" width="960">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-pretrend-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) 上下2.5%削除
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pretrend-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: プレトレンドテスト
+</figcaption>
+</figure>
+</div>
+<aside class="notes">
+<p>プレトレンドテストでは、課税優遇施行前においてファミリー企業と非ファミリー企業の従業員１人当たり人件費・福利厚生費の平均が時間とともに同じように変化しているかをグラフで確認する。課税優遇施行前でさえ同様の変化でないならば、思考後も同様の変化ではないだろうと考え、これを仮説の最低限の確認とする。</p>
+<p>今回は平行トレンドが確認出来ないことが分かる。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<h3 data-number="8.2.4" id="実行と結果の解釈"><span class="header-section-number">8.2.4</span> 実行と結果の解釈</h3>
+
+<img data-src="images/スクリーンショット_22-1-2025_8017_.jpeg" class="r-stretch quarto-figure-center" id="fig-didmodels"><p class="caption">
+Figure&nbsp;8: DID分析の回帰モデル比較（括弧の中身はp値）
+</p><aside class="notes">
+<p><a href="#/fig-didmodels" class="quarto-xref">Figure&nbsp;8</a> を見たところ、</p>
+<ul>
+<li><p>コントロールのありなしに関わらずファミリービジネスダミーの回帰係数が有意に正である。従ってファミリー企業は、非ファミリー企業に比べ従業員１人当たり人件費・福利厚生費は高くなると言える。</p></li>
+<li><p>年度ダミーの回帰係数は（有意ではないが）コントロールあり/なしのモデル間で正負が異なる結果となった。</p></li>
+<li><p>交差項の回帰係数（DID）は有意に正でないため、ファミリー企業の従業員１人当たり人件費・福利厚生費は課税優遇制度施行前後で、非ファミリー企業のそれと比較してより大きく増大しているとは言えない。</p></li>
+</ul>
+<p>なお、<a href="#/fig-didmodels" class="quarto-xref">Figure&nbsp;8</a> の括弧の中身はp値を表している。また産業ダミー（ind_dummy）は数が多いため表からは除外しているが、その回帰係数の多くは有意であった。</p>
+<p>結果として、</p>
+<p><strong>仮説（再掲）</strong>：ファミリー企業は賃上げ税制施行後に、非ファミリー企業よりも賃上げをしている。</p>
+<p>は成り立たなかった。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="イベントスタディ" class="slide level2" data-number="8.3">
+<h2><span class="header-section-number">8.3</span> イベントスタディ</h2>
+<h3 data-number="8.3.1" id="モデル-1"><span class="header-section-number">8.3.1</span> モデル</h3>
+<h4 data-number="8.3.1.1" id="sec-evmodel"><span class="header-section-number">8.3.1.1</span> １つ目のモデル</h4>
+<span class="math display">\[\begin{align*}
+\text{LaborCost_by_person}_{it}&amp;=\mu+\theta \text{FB_dummy}_{it}+\pi \text{Year}_t\\
+&amp;\quad+\gamma_{2015} \text{FB_dummy}_{i,2015}\times \text{Year}_{2015}\\
+&amp;\quad+\gamma_{2016} \text{FB_dummy}_{i,2016}\times \text{Year}_{2016}\\
+&amp;\quad+\beta_{2018} \text{FB_dummy}_{i,2018}\times \text{Year}_{2018}\\
+&amp;\quad+\beta_{2019} \text{FB_dummy}_{i,2019}\times \text{Year}_{2019}\\
+&amp;\quad+\beta_{2020} \text{FB_dummy}_{i,2020}\times \text{Year}_{2020}+\epsilon_{it}
+\end{align*}\]</span>
+<aside class="notes">
+<p>（次ページに同じ説明あり）</p>
+<ul>
+<li><p><span class="math inline">\(i\)</span>は企業です。</p></li>
+<li><p><span class="math inline">\(t\)</span>は年度です。</p></li>
+<li><p><span class="math inline">\(Year_t\)</span>は年度ダミーです。この年度ダミーは、<span class="math inline">\(t\)</span>年度であれば1、そうでなければ0をとります。</p></li>
+<li><p>基準年度（2017年）より前の交差項の係数を<span class="math inline">\(\gamma_t\)</span>、後の係数を<span class="math inline">\(\beta_t\)</span>として区別しています。いま特に興味があるのは<span class="math inline">\(\beta_t\)</span>の推定値です。</p></li>
+<li><p>課税優遇施行前の交差項の係数は<span class="math inline">\(\gamma_{t},t=2015,2016\)</span>です。</p></li>
+<li><p><strong>課税優遇施行後の交差項の係数は</strong><span class="math inline">\(\beta_{t},t=2018,2019,2020\)</span>です。</p></li>
+<li><p>これらは、<span class="math inline">\(t\)</span>年度のファミリー企業の従業員１人当たり人件費・福利厚生費が基準年度（<span class="math inline">\(t=2017\)</span>）と比較してどの程度大きいかを表しています。</p>
+<ul>
+<li>税制施行直前の2017年を基準年としました。</li>
+</ul></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<ul>
+<li><p><span class="math inline">\(i\)</span>は企業です。</p></li>
+<li><p><span class="math inline">\(t\)</span>は年度です。</p></li>
+<li><p><span class="math inline">\(Year_t\)</span>は年度ダミーです。この年度ダミーは、<span class="math inline">\(t\)</span>年度であれば1、そうでなければ0をとります。</p></li>
+<li><p>基準年度（2017年）より前の交差項の係数を<span class="math inline">\(\gamma_t\)</span>、後の係数を<span class="math inline">\(\beta_t\)</span>として区別しています。いま特に興味があるのは<span class="math inline">\(\beta_t\)</span>の推定値です。</p></li>
+<li><p>課税優遇施行前の交差項の係数は<span class="math inline">\(\gamma_{t},t=2015,2016\)</span>です。</p></li>
+<li><p><strong>課税優遇施行後の交差項の係数は</strong><span class="math inline">\(\beta_{t},t=2018,2019,2020\)</span>です。</p></li>
+<li><p>これらは、<span class="math inline">\(t\)</span>年度のファミリー企業の従業員１人当たり人件費・福利厚生費が基準年度（<span class="math inline">\(t=2017\)</span>）と比較してどの程度大きいかを表しています。</p>
+<ul>
+<li>税制施行直前の2017年を基準年としました。</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h4 data-number="8.3.1.2" id="つ目のモデル-2"><span class="header-section-number">8.3.1.2</span> ２つ目のモデル</h4>
+<span class="math display">\[\begin{align*}
+\text{LaborCost_by_person}_{it}&amp;=\mu+\alpha_1 \text{ROA}_{it} + \alpha_2 \text{Sales}_{it} +\alpha_3 \text{Cash}_{it}\\
+&amp;\quad+\alpha_4 \text{Leverage}_{it}+\alpha_5 \text{Employee}_{it}\\
+&amp;\quad+\alpha_6 \text{ind_dummy}_{it}\\
+&amp;\quad+\theta \text{FB_dummy}_{it}+\pi \text{Year}_t\\
+&amp;\quad+\gamma_{2015} \text{FB_dummy}_{i,2015}\times \text{Year}_{2015}\\
+&amp;\quad+\gamma_{2016} \text{FB_dummy}_{i,2016}\times \text{Year}_{2016}\\
+&amp;\quad+\beta_{2018} \text{FB_dummy}_{i,2018}\times \text{Year}_{2018}\\
+&amp;\quad+\beta_{2019} \text{FB_dummy}_{i,2019}\times \text{Year}_{2019}\\
+&amp;\quad+\beta_{2020} \text{FB_dummy}_{i,2020}\times \text{Year}_{2020}+\epsilon_{it}
+\end{align*}\]</span>
+<p>このモデルは、人件費に影響を与えると考えられるコントロール変数を加えたものです。</p>
+</section>
+<section class="slide level2">
+
+<h3 data-number="8.3.2" id="実行と結果の解釈-1"><span class="header-section-number">8.3.2</span> 実行と結果の解釈</h3>
+<div id="fig-evmodels" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-evmodels-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/スクリーンショット_22-1-2025_93931_.jpeg"></p>
+<figcaption>１ページ目</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/スクリーンショット_22-1-2025_94018_.jpeg"></p>
+<figcaption>２ページ目</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-evmodels-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: イベントスタディの回帰モデル比較（括弧の中身はp値）
+</figcaption>
+</figure>
+</div>
+<aside class="notes">
+<p><a href="#/fig-evmodels" class="quarto-xref">Figure&nbsp;9</a> を見ると、DID分析と同様にファミリービジネスダミーの回帰係数は有意に正となっているが、交差項の回帰係数は両モデル、どの年度でも有意ではない。ここでも、</p>
+<p><strong>仮説（再掲）：</strong>ファミリー企業は賃上げ税制施行後に、非ファミリー企業よりも賃上げをしている。</p>
+<p>は成り立たなかった。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+<h3 data-number="8.3.3" id="イベントスタディの可視化とプレトレンドテスト"><span class="header-section-number">8.3.3</span> イベントスタディの可視化とプレトレンドテスト</h3>
+<div id="fig-evplot" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-evplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-evplot" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-evplot-1" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-subfloat-fig">
+<div aria-describedby="fig-evplot-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="FamilyBusiness_presntation_files/figure-revealjs/fig-evplot-1.png" data-fig-pos="H" data-ref-parent="fig-evplot" width="960">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-evplot-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) コントロールなし
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-evplot" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-evplot-2" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-subfloat-fig">
+<div aria-describedby="fig-evplot-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="FamilyBusiness_presntation_files/figure-revealjs/fig-evplot-2.png" data-fig-pos="H" data-ref-parent="fig-evplot" width="960">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-evplot-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) コントロールあり
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-evplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: イベントスタディにおける交差項の回帰係数の推定値の推移
+</figcaption>
+</figure>
+</div>
+<aside class="notes">
+<p>回帰分析の結果（Table <a href="#/fig-evmodels" class="quarto-xref">Figure&nbsp;9</a> ）でも確認した通り回帰係数の推定値は年度ごとに殆ど変動していないことが見て取れるが、特に2021年度に注目すると、コロナ禍での企業の業績悪化で、人件費・福利厚生費に負の影響が出たようにも読むことが出来る。</p>
+<p><a href="#/sec-evmodel" class="quarto-xref">Section&nbsp;8.3.1.1</a> 節で構築したモデルを振り返ると、課税優遇施行前の項が含まれていた。ここで、プレトレンドテストとは <a href="#/sec-pretrend" class="quarto-xref">Section&nbsp;8.2.3.1</a> 節で確認したように、課税優遇施行前においてファミリー企業と非ファミリー企業の従業員１人当たり人件費・福利厚生費（の平均）が時間とともに同じように変化しているかを調べるものであった。すなわち、イベントスタディにおいては課税優遇施行前の交差項の回帰係数の推定値が0付近にあるかを確認すればプレトレンドテストを実施できる。</p>
+<p><a href="#/fig-evplot" class="quarto-xref">Figure&nbsp;10</a> 及び <a href="#/fig-evmodels" class="quarto-xref">Figure&nbsp;9</a> を確認すると、課税優遇施行前の回帰係数の推定値が<span class="math inline">\(0\)</span>付近であることが確認できるが、信頼区間が大きく推定精度が高くないことも見て取れる。</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="本研究の課題点" class="title-slide slide level1 center" data-number="9">
+<h1><span class="header-section-number">9</span> 本研究の課題点</h1>
+
+</section>
+<section class="slide level2">
+
+<ul>
+<li><strong>データの取得</strong>：本研究の回帰分析の目的変数は「従業員１人当たり人件費・福利厚生費」だが、本来は人件費・福利厚生費ではなく「従業員給与」のほうが好ましい。日経NEEDSで取得できる「人件費・福利厚生費」は、従業員の給与、賞与、法定福利費、福利厚生費、福利施設費、賞与引当金繰入額等を含むが、まず福利厚生に関する費用は（福利厚生の内容も企業によりバラバラであり）企業ごとにどれだけの額が課税優遇の対象となっているのか判然としない。また賞与引当金繰入額については将来の支給見込み額であり経営者による操作の余地が大きい。更に、様々な項目を混合しているためデータの透明性も極めて低くなっている。日経NEEDSの従業員給与の項目は本研究の時点ではデータが空白となっており取得は出来なかった。従業員給与だけを分析するための工夫が必要だ。</li>
+<li><strong>税引き前投資収益率の低下</strong>：本研究のデータの範囲で実際に税引き前投資収益率の低下が存在するかは検証できていない。</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li><strong>税務計画</strong>：仮にある企業について税引き前投資収益率の低下が発生していたとしても、その企業がその時点で税引き後キャッシュフローを最大化させるためには、顕在税と税引き前投資収益率の低下のどちらを優先的に削減・抑制すべきかを特定することが出来ていない。そのため、賃上げの事実をそのまま社会的責任に繋げて考えることは現状出来ない。</li>
+<li><strong>ファミリー企業の分類</strong>：ファミリー企業と非ファミリー企業のに分類だけでなく、ファミリー企業をさらに細かく分類し分析することで新たな知見が得られる可能性が高い。</li>
+<li><strong>利益配分</strong>：の視点スチュワードシップ理論によると、経営者は従業員のためだけでなく株主等も含めたすべてのステークホルターの幸福を目指して行動する。従って分析においては株主還元に関する変数（配当性向、自社株買い等）も考慮するとよい。これに関連して、 <span class="citation" data-cites="Yamada2022">山田 (<a href="#/参考文献" role="doc-biblioref" onclick="">2022</a>)</span> は特に人件費と株主還元に正の相関があることを指摘している。</li>
+</ul>
+</section></section>
+<section id="参考文献" class="title-slide slide level1 smaller scrollable" data-number="10">
+<h1><span class="header-section-number">10</span> 参考文献</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Asaba2013" class="csl-entry" role="listitem">
+Asaba, Shigeru. 2013. <span>“Patient Investment of Family Firms in the Japanese Electric Machinery Industry.”</span> <em>Asia Pacific Journal of Management</em> 30: 697–715. <a href="https://doi.org/10.1007/s10490-012-9319-3">https://doi.org/10.1007/s10490-012-9319-3</a>.
+</div>
+<div id="ref-Asaba2019" class="csl-entry" role="listitem">
+Asaba, Shigeru, and Takahiro Wada. 2019. <span>“The Contact-Hitting r&amp;d Strategy of Family Firms in the Japanese Pharmaceutical Industry.”</span> <em>Family Business Review</em> 32 (3): 277–95. <a href="https://doi.org/10.1177/0894486519852449">https://doi.org/10.1177/0894486519852449</a>.
+</div>
+<div id="ref-Davis1997" class="csl-entry" role="listitem">
+Davis, James H., F. David Schoorman, and Lex Donaldson. 1997. <span>“Toward a Stewardship Theory of Management.”</span> <em>The Academy of Management Review</em> 22 (1): 20–47. <a href="http://www.jstor.org/stable/259223">http://www.jstor.org/stable/259223</a>.
+</div>
+<div id="ref-Donaldson1991" class="csl-entry" role="listitem">
+Donaldson, Lex, and James Herbert Davis. 1991. <span>“Stewardship Theory or Agency Theory: CEO Governance and Shareholder Returns.”</span> <em>Australian Journal of Management</em> 16: 49–64. <a href="https://api.semanticscholar.org/CorpusID:15324853">https://api.semanticscholar.org/CorpusID:15324853</a>.
+</div>
+<div id="ref-Dyer2006" class="csl-entry" role="listitem">
+Dyer, W. Gibb Jr, and David A. Whetten. 2006. <span>“Family Firms and Social Responsibility: Preliminary Evidence from the s&amp;p 500.”</span> <em>Entrepreneurship Theory and Practice</em> 30 (6): 785–802. <a href="https://doi.org/10.1111/j.1540-6520.2006.00151.x">https://doi.org/10.1111/j.1540-6520.2006.00151.x</a>.
+</div>
+<div id="ref-Ebihara2012" class="csl-entry" role="listitem">
+Ebihara, Takashi, Keiichi Kubota, Hitoshi Takehara, and Eri Yokota. 2012. <span>“Quality of Accounting Disclosures by Family Firms in Japan.”</span> In. <a href="https://api.semanticscholar.org/CorpusID:166815071">https://api.semanticscholar.org/CorpusID:166815071</a>.
+</div>
+<div id="ref-Fama1983" class="csl-entry" role="listitem">
+Fama, Eugene F., and Michael C. Jensen. 1983. <span>“Separation of Ownership and Control.”</span> <em>Journal of Law and Economics</em> 26 (2): 301–25.
+</div>
+<div id="ref-Gersick1997" class="csl-entry" role="listitem">
+Gersick, Kelin E., John A. Davis, et al. 1997. <em>Generation to Generation: Life Cycles of the Family Business</em>. Boston, MA: Harvard Business Review Press. <a href="https://www.amazon.com/Generation-Life-Cycles-Family-Business/dp/087584555X">https://www.amazon.com/Generation-Life-Cycles-Family-Business/dp/087584555X</a>.
+</div>
+<div id="ref-Gomez2007" class="csl-entry" role="listitem">
+Gómez-Mejía, Luis R., Katalin Takács Haynes, Manuel Núñez-Nickel, Kathyrn J. L. Jacobson, and José Moyano-Fuentes. 2007. <span>“Socioemotional Wealth and Business Risks in Family-Controlled Firms: Evidence from Spanish Olive Oil Mills.”</span> <em>Administrative Science Quarterly</em> 52 (1): 106–37.
+</div>
+<div id="ref-Jensen1976" class="csl-entry" role="listitem">
+Jensen, Michael C., and William H. Meckling. 1976. <span>“Theory of the Firm: Managerial Behavior, Agency Costs and Ownership Structure.”</span> <em>Journal of Financial Economics</em> 3 (4): 305–60.
+</div>
+<div id="ref-nikkeiNEEDSFQ" class="csl-entry" role="listitem">
+Nikkei Inc. 2024. <span>“Nikkei NEEDS Financial QUEST (NEEDS-FQ).”</span> <a href="https://www.nikkei.com/needs/">https://www.nikkei.com/needs/</a>.
+</div>
+<div id="ref-Saito2008" class="csl-entry" role="listitem">
+Saito, Takuji. 2008. <span>“Family Firms and Firm Performance: Evidence from Japan.”</span> <em>Journal of the Japanese and International Economies</em> 22 (4): 620–46. https://doi.org/<a href="https://doi.org/10.1016/j.jjie.2008.06.001">https://doi.org/10.1016/j.jjie.2008.06.001</a>.
+</div>
+<div id="ref-Kubota2012" class="csl-entry" role="listitem">
+久保田敬一, 海老原崇, 横田絵理, 二階堂有子, 河合忠彦, 浅羽茂, 竹原均, et al. 2012. <span>“同族企業の経営とガバナンス: 経営財務行動と効率性・革新性の分析.”</span> <a href="https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-21243029/">https://kaken.nii.ac.jp/grant/KAKENHI-PROJECT-21243029/</a>.
+</div>
+<div id="ref-Iriyama2014" class="csl-entry" role="listitem">
+入山章栄, and 山野井順一. 2014. <span>“世界の同族企業研究の潮流.”</span> <em>組織科学</em> 48 (1): 25–37. <a href="https://doi.org/10.11207/soshikikagaku.48.1_25">https://doi.org/10.11207/soshikikagaku.48.1_25</a>.
+</div>
+<div id="ref-Amma2014" class="csl-entry" role="listitem">
+安間陽加. 2024. <span>“課税優遇措置の適用が顕在税および伏在税負担に与える影響.”</span> 神戸市灘区六甲台町2-1: 現代経営学研究所.
+</div>
+<div id="ref-Yamada2022" class="csl-entry" role="listitem">
+山田和郎. 2022. <span>“人件費と株主還元.”</span> <em>未発表論文</em>.
+</div>
+<div id="ref-FB2015" class="csl-entry" role="listitem">
+後藤俊夫. 2015. <em>ファミリービジネス白書 2015年版</em>. 東京: ダイヤモンド社.
+</div>
+<div id="ref-FB2018" class="csl-entry" role="listitem">
+———. 2018. <em>ファミリービジネス白書【2018年版】: 100年経営とガバナンス</em>. 東京: 白桃書房.
+</div>
+<div id="ref-FB2022" class="csl-entry" role="listitem">
+———. 2022. <em>ファミリービジネス白書【2022年版】: 未曽有の環境変化と危機突破力</em>. 東京: 白桃書房.
+</div>
+<div id="ref-Shim2014" class="csl-entry" role="listitem">
+沈政郁. 2014. <span>“血縁主義の弊害：日本の同族企業の長期データを用いた実証分析.”</span> <em>組織科学</em> 48 (1): 38–51. <a href="https://doi.org/10.11207/soshikikagaku.48.1_38">https://doi.org/10.11207/soshikikagaku.48.1_38</a>.
+</div>
+<div id="ref-Asaba2015" class="csl-entry" role="listitem">
+淺羽茂. 2015. <span>“日本のファミリービジネス研究.”</span> <em>一橋ビジネスレビュー</em> 63 (2): 20–30. <a href="https://cir.nii.ac.jp/crid/1520572359052287616">https://cir.nii.ac.jp/crid/1520572359052287616</a>.
+</div>
+<div id="ref-Suzuki2013" class="csl-entry" role="listitem">
+鈴木一水. 2013. <em>税務会計分析: 税務計画と税務計算の統合</em>. 東京, 日本: 森山書店.
+</div>
+</div>
+
+</section>
+
+
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="FamilyBusiness_presntation_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="FamilyBusiness_presntation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="FamilyBusiness_presntation_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="FamilyBusiness_presntation_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="FamilyBusiness_presntation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="FamilyBusiness_presntation_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="FamilyBusiness_presntation_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="FamilyBusiness_presntation_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="FamilyBusiness_presntation_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="FamilyBusiness_presntation_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1440,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+
+    <script>
+
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
+      // slide changes (different for each slide format).
+
+      (function () {
+
+        // dispatch for htmlwidgets
+
+        function fireSlideEnter() {
+
+          const event = window.document.createEvent("Event");
+
+          event.initEvent("slideenter", true, true);
+
+          window.document.dispatchEvent(event);
+
+        }
+
+    
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          fireSlideEnter();
+
+    
+
+          // dispatch for shiny
+
+          if (window.jQuery) {
+
+            if (previousSlide) {
+
+              window.jQuery(previousSlide).trigger("hidden");
+
+            }
+
+            if (currentSlide) {
+
+              window.jQuery(currentSlide).trigger("shown");
+
+            }
+
+          }
+
+        }
+
+    
+
+        // hookup for slidy
+
+        if (window.w3c_slidy) {
+
+          window.w3c_slidy.add_observer(function (slide_num) {
+
+            // slide_num starts at position 1
+
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
+          });
+
+        }
+
+    
+
+      })();
+
+    </script>
+
+    
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>
